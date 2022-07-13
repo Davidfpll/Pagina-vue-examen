@@ -55,7 +55,7 @@ export default {
 		const requestOptions = {
 			method: 'PUT',
 			headers:{
-				Authorization: `Bearer ${global.token}`,
+				Authorization: `Bearer ${localStorage.getItem('token')}`,
 				"Content-Type": "application/json"
 			},
 			redirect: 'follow',
@@ -94,7 +94,7 @@ export default {
 		const requestOptions = {
 			method: 'DELETE',
 			headers:{
-				Authorization: `Bearer ${global.token}`
+				Authorization: `Bearer ${localStorage.getItem('token')}`
 			},
 			redirect: 'follow',
 		};
